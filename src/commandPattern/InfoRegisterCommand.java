@@ -69,7 +69,7 @@ public class InfoRegisterCommand implements ICommand {
         String bool = sc.nextLine();
         while (true){
             if(bool.equals("yes")){
-                System.out.println("Please tell us about yourself:"); //Optional
+                System.out.println("Please tell us about yourself:");
                 selfDescription.add(sc.nextLine());
                 break;
             }
