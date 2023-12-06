@@ -54,20 +54,16 @@ public class SmsService {
 
             File file = new File("logger.txt");
 
-            // If the file doesn't exist, create a new file
             if (!file.exists()) {
                 file.createNewFile();
             }
 
-            // Open the file in append mode
             FileWriter fw = new FileWriter(file, true);
             BufferedWriter bw = new BufferedWriter(fw);
 
-            // Write the given line as a new line
             bw.write(line);
             bw.newLine();
 
-            // Close the BufferedWriter
             bw.close();
         } catch (IOException e) {
             System.err.println("An error occurred while writing to the file: " + e.getMessage());
